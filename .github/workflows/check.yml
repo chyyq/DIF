@@ -1,0 +1,30 @@
+name: Check LBR code
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["data/**", "*.md", "preview.jpg"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Strategy, trade semantics and data pipeline regressions
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Browser journal, integration and HTTP server regressions
+        run: node --test tests/*.test.mjs
+      - name: Validate deployable public files and relative imports
+        run: python scripts/verify_site.py

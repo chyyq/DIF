@@ -41,6 +41,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Verify strategy before updating public data
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
       - name: Generate market snapshot and maintain candidate batches
         shell: python
         run: |

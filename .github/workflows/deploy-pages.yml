@@ -37,6 +37,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Validate website entry, modules and JSON before packaging
+        run: python scripts/verify_site.py
+
       - name: Stage public site files
         shell: python
         run: |
