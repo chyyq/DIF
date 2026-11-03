@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-03T22:36:53.580075+08:00",
-    "lastSuccessfulAt": "2026-11-03T22:36:53.580075+08:00",
+    "generatedAt": "2026-11-03T22:40:54.639193+08:00",
+    "lastSuccessfulAt": "2026-11-03T22:40:54.639193+08:00",
     "quoteTimestamp": "2026-11-03T16:15:00+08:00",
     "tradingDate": "2026-11-03",
     "stale": false,
@@ -17,17 +17,19 @@
       {
         "name": "Tencent",
         "ok": true,
-        "note": "5223 requested symbols received with reported daily limits; security/account metadata unverified"
+        "note": "5143 requested symbols received with reported daily limits; security/account metadata unverified"
       },
       {
         "name": "Sina-universe",
         "ok": true,
-        "note": "Enumerated 5577 symbols; complete=True; explicit board exclusions complete=True"
+        "note": "Enumerated 5497 symbols; complete=False; explicit board exclusions complete=True"
       }
     ],
     "errors": [
       "Daily history 000001.SH: Remote end closed connection without response",
-      "Eastmoney universe SSE_MAIN page 1: Remote end closed connection without response"
+      "Eastmoney universe SSE_MAIN page 1: Remote end closed connection without response",
+      "Sina node hs_a page: <urlopen error _ssl.c:999: The handshake operation timed out>",
+      "Sina universe incomplete; missing previous symbols remain stale"
     ],
     "automaticOrders": false,
     "calendarSource": "Tencent index actual daily-bar dates (observed, no future schedule)",
@@ -1133,12 +1135,12 @@
   "stats": {
     "candidateCount": 2,
     "eventCount": 248,
-    "quoteCount": 5223,
+    "quoteCount": 5143,
     "watchCount": 1,
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 120,
+    "historyAnalyzedCount": 127,
     "historyEnrichmentCap": 120
   },
   "learning": {
