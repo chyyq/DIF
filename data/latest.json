@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-03T16:36:21.402273+08:00",
-    "lastSuccessfulAt": "2026-11-03T16:36:21.402273+08:00",
+    "generatedAt": "2026-11-03T20:57:00.413490+08:00",
+    "lastSuccessfulAt": "2026-11-03T20:57:00.413490+08:00",
     "quoteTimestamp": "2026-11-03T16:12:01+08:00",
     "tradingDate": "2026-11-03",
     "stale": false,
@@ -18,9 +18,20 @@
         "name": "Eastmoney-universe",
         "ok": true,
         "note": "5218 symbols received; pagination can be partial and is reported separately"
+      },
+      {
+        "name": "Tencent-history",
+        "ok": true,
+        "note": "Actual historical daily bars; no intraday confirmation"
       }
     ],
-    "errors": [],
+    "errors": [
+      "Daily history 002812.SZ: No request budget",
+      "Tencent daily history 603667.SH: Pipeline request budget exhausted",
+      "Tencent daily history 603448.SH: Pipeline request budget exhausted",
+      "Tencent daily history 002979.SZ: Pipeline request budget exhausted",
+      "Tencent daily history 002896.SZ: Pipeline request budget exhausted"
+    ],
     "automaticOrders": false,
     "calendarSource": "Eastmoney index actual daily-bar dates (observed, no future schedule)",
     "parameterHash": "2b62cd09f3c5584c",
@@ -1131,7 +1142,7 @@
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 121,
+    "historyAnalyzedCount": 120,
     "historyEnrichmentCap": 120
   },
   "learning": {
