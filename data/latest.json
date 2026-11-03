@@ -2,9 +2,9 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-03T22:19:24.965153+08:00",
-    "lastSuccessfulAt": "2026-11-03T22:19:24.965153+08:00",
-    "quoteTimestamp": "2026-11-03T16:12:01+08:00",
+    "generatedAt": "2026-11-03T22:32:10.355480+08:00",
+    "lastSuccessfulAt": "2026-11-03T22:32:10.355480+08:00",
+    "quoteTimestamp": "2026-11-03T16:15:00+08:00",
     "tradingDate": "2026-11-03",
     "stale": false,
     "mode": "public-delayed-manual-monitor",
@@ -15,26 +15,21 @@
         "note": "Actual historical daily bars; no intraday confirmation"
       },
       {
-        "name": "Eastmoney",
+        "name": "Tencent",
         "ok": true,
-        "note": "Public delayed quote endpoint responded; metadata remains unverified"
+        "note": "5143 requested symbols received with reported daily limits; security/account metadata unverified"
       },
       {
-        "name": "Eastmoney-universe",
+        "name": "Sina-universe",
         "ok": true,
-        "note": "99 symbols received; pagination can be partial and is reported separately"
+        "note": "Enumerated 5497 symbols; complete=False; explicit board exclusions complete=True"
       }
     ],
     "errors": [
       "Daily history 000001.SH: Remote end closed connection without response",
-      "Eastmoney universe SSE_MAIN page 2: Remote end closed connection without response",
-      "Eastmoney universe SZSE_MAIN page 1: Remote end closed connection without response",
-      "Eastmoney universe CHINEXT page 1: Remote end closed connection without response",
-      "Eastmoney universe STAR page 1: Remote end closed connection without response",
-      "Daily limits 605179.SH: Remote end closed connection without response",
-      "Daily limits 605305.SH: Remote end closed connection without response",
-      "Daily limits 605258.SH: Remote end closed connection without response",
-      "Daily limits 605168.SH: Remote end closed connection without response"
+      "Eastmoney universe SSE_MAIN page 1: Remote end closed connection without response",
+      "Sina node hs_a page: <urlopen error _ssl.c:999: The handshake operation timed out>",
+      "Sina universe incomplete; missing previous symbols remain stale"
     ],
     "automaticOrders": false,
     "calendarSource": "Tencent index actual daily-bar dates (observed, no future schedule)",
@@ -872,7 +867,7 @@
       "referencePeak": 14.15,
       "firstObservedAt": "2026-11-03T16:29:24.411043+08:00",
       "amount": 194910000.0,
-      "stale": true,
+      "stale": false,
       "price": 13.14,
       "high": 13.49,
       "low": 12.92,
@@ -1025,8 +1020,7 @@
         "STRUCTURE_UNVERIFIED",
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
-        "QUOTE_MISSING"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
       ],
       "status": "WATCH",
       "action": "WATCH_NO_BROKER_ORDER",
@@ -1106,15 +1100,14 @@
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
         "LIQUIDITY_FLOOR_FAILED",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
-        "QUOTE_MISSING"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
       ],
-      "status": "WATCH",
-      "action": "WATCH_NO_BROKER_ORDER",
+      "status": "EXPIRE",
+      "action": "EXPIRE_UNFILLED",
       "compositeScore": null,
       "entryMode": "MANUAL_RECORD_ONLY",
       "eventType": "LIMIT_UP",
-      "stale": true,
+      "stale": false,
       "volatility": {
         "available": false,
         "reason": "VOLATILITY_HISTORY_MISSING",
@@ -1142,12 +1135,12 @@
   "stats": {
     "candidateCount": 2,
     "eventCount": 248,
-    "quoteCount": 99,
-    "watchCount": 2,
+    "quoteCount": 5143,
+    "watchCount": 1,
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 46,
+    "historyAnalyzedCount": 150,
     "historyEnrichmentCap": 120
   },
   "learning": {
