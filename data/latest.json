@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-03T16:29:24.411043+08:00",
-    "lastSuccessfulAt": "2026-11-03T16:29:24.411043+08:00",
+    "generatedAt": "2026-11-03T16:36:21.402273+08:00",
+    "lastSuccessfulAt": "2026-11-03T16:36:21.402273+08:00",
     "quoteTimestamp": "2026-11-03T16:12:01+08:00",
     "tradingDate": "2026-11-03",
     "stale": false,
@@ -1016,8 +1016,7 @@
       "action": "WATCH_NO_BROKER_ORDER",
       "compositeScore": null,
       "pricePreference": "PREFERRED",
-      "entryMode": "MANUAL_RECORD_ONLY",
-      "supersededEventId": "002322.SZ:2026-10-23:01"
+      "entryMode": "MANUAL_RECORD_ONLY"
     },
     {
       "strategyId": "LBR_MAIN_V1",
@@ -1132,7 +1131,7 @@
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 120,
+    "historyAnalyzedCount": 121,
     "historyEnrichmentCap": 120
   },
   "learning": {
