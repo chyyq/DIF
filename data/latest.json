@@ -2,13 +2,18 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-04T22:50:45.751282+08:00",
-    "lastSuccessfulAt": "2026-11-04T22:50:45.751282+08:00",
+    "generatedAt": "2026-11-04T22:54:20.855465+08:00",
+    "lastSuccessfulAt": "2026-11-04T22:54:20.855465+08:00",
     "quoteTimestamp": "2026-11-04T16:12:01+08:00",
     "tradingDate": "2026-11-04",
     "stale": false,
     "mode": "public-delayed-manual-monitor",
     "sourceHealth": [
+      {
+        "name": "Tencent-history",
+        "ok": true,
+        "note": "Actual historical daily bars; no intraday confirmation"
+      },
       {
         "name": "Eastmoney",
         "ok": true,
@@ -17,12 +22,24 @@
       {
         "name": "Eastmoney-universe",
         "ok": true,
-        "note": "5220 symbols received; pagination can be partial and is reported separately"
+        "note": "99 symbols received; pagination can be partial and is reported separately"
       }
     ],
-    "errors": [],
+    "errors": [
+      "Daily history 000001.SH: Remote end closed connection without response",
+      "Eastmoney universe SSE_MAIN page 2: Remote end closed connection without response",
+      "Eastmoney universe SZSE_MAIN page 1: Remote end closed connection without response",
+      "Eastmoney universe CHINEXT page 1: Remote end closed connection without response",
+      "Eastmoney universe STAR page 1: Remote end closed connection without response",
+      "Daily limits 605598.SH: Remote end closed connection without response",
+      "Daily limits 605090.SH: Remote end closed connection without response",
+      "Daily limits 605168.SH: Remote end closed connection without response",
+      "Daily limits 605118.SH: Remote end closed connection without response",
+      "Daily limits 605179.SH: Remote end closed connection without response",
+      "Daily limits 605198.SH: Remote end closed connection without response"
+    ],
     "automaticOrders": false,
-    "calendarSource": "Eastmoney index actual daily-bar dates (observed, no future schedule)",
+    "calendarSource": "Tencent index actual daily-bar dates (observed, no future schedule)",
     "parameterHash": "2b62cd09f3c5584c",
     "parameterVersion": "1.1.0",
     "dataLimits": [
@@ -824,7 +841,7 @@
       "2026-11-03",
       "2026-11-04"
     ],
-    "source": "Eastmoney index actual daily-bar dates (observed, no future schedule)",
+    "source": "Tencent index actual daily-bar dates (observed, no future schedule)",
     "verified": true,
     "coverageThrough": "2026-11-04",
     "futureDatesEstimated": false
@@ -858,7 +875,7 @@
       "referencePeak": 14.15,
       "firstObservedAt": "2026-11-03T16:29:24.411043+08:00",
       "amount": 189269080.53,
-      "stale": false,
+      "stale": true,
       "price": 13.35,
       "high": 13.35,
       "low": 12.91,
@@ -1012,7 +1029,8 @@
         "STRUCTURE_UNVERIFIED",
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
+        "QUOTE_MISSING"
       ],
       "status": "WATCH",
       "action": "WATCH_NO_BROKER_ORDER",
@@ -1041,7 +1059,7 @@
       "limitEventVerified": true,
       "limitEventSource": "Tencent reported daily upper/lower limit fields 47/48",
       "amount": 155632405.84,
-      "stale": false,
+      "stale": true,
       "price": 17.0,
       "high": 17.0,
       "low": 14.92,
@@ -1200,10 +1218,11 @@
         "STRUCTURE_UNVERIFIED",
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
+        "QUOTE_MISSING"
       ],
-      "status": "CANCEL",
-      "action": "CANCEL_PENDING_BUY",
+      "status": "WATCH",
+      "action": "WATCH_NO_BROKER_ORDER",
       "compositeScore": null,
       "pricePreference": "PREFERRED",
       "entryMode": "MANUAL_RECORD_ONLY",
@@ -1212,13 +1231,13 @@
   ],
   "stats": {
     "candidateCount": 2,
-    "eventCount": 416,
-    "quoteCount": 5220,
-    "watchCount": 1,
+    "eventCount": 419,
+    "quoteCount": 99,
+    "watchCount": 2,
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 150,
+    "historyAnalyzedCount": 98,
     "historyEnrichmentCap": 120
   },
   "learning": {
