@@ -2,42 +2,35 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-04T22:22:40.044723+08:00",
-    "lastSuccessfulAt": "2026-11-04T22:22:40.044723+08:00",
-    "quoteTimestamp": "2026-11-04T16:12:01+08:00",
+    "generatedAt": "2026-11-04T22:35:58.969455+08:00",
+    "lastSuccessfulAt": "2026-11-04T22:35:58.969455+08:00",
+    "quoteTimestamp": "2026-11-04T16:15:00+08:00",
     "tradingDate": "2026-11-04",
     "stale": false,
     "mode": "public-delayed-manual-monitor",
     "sourceHealth": [
       {
-        "name": "Eastmoney",
-        "ok": true,
-        "note": "Public delayed quote endpoint responded; metadata remains unverified"
-      },
-      {
-        "name": "Eastmoney-universe",
-        "ok": true,
-        "note": "5220 symbols received; pagination can be partial and is reported separately"
-      },
-      {
         "name": "Tencent-history",
         "ok": true,
         "note": "Actual historical daily bars; no intraday confirmation"
+      },
+      {
+        "name": "Tencent",
+        "ok": true,
+        "note": "5223 requested symbols received with reported daily limits; security/account metadata unverified"
+      },
+      {
+        "name": "Sina-universe",
+        "ok": true,
+        "note": "Enumerated 5577 symbols; complete=True; explicit board exclusions complete=True"
       }
     ],
     "errors": [
-      "Daily limits 605366.SH: No request budget",
-      "Daily history 605366.SH: No request budget",
-      "Daily limits 603778.SH: No request budget",
-      "Daily limits 603028.SH: No request budget",
-      "Tencent daily history 603028.SH: Pipeline request budget exhausted",
-      "Tencent daily history 603668.SH: Pipeline request budget exhausted",
-      "Tencent daily history 603912.SH: Pipeline request budget exhausted",
-      "Tencent daily history 600278.SH: Pipeline request budget exhausted",
-      "Tencent daily history 603999.SH: Pipeline request budget exhausted"
+      "Daily history 000001.SH: Remote end closed connection without response",
+      "Eastmoney universe SSE_MAIN page 1: Remote end closed connection without response"
     ],
     "automaticOrders": false,
-    "calendarSource": "Eastmoney index actual daily-bar dates (observed, no future schedule)",
+    "calendarSource": "Tencent index actual daily-bar dates (observed, no future schedule)",
     "parameterHash": "2b62cd09f3c5584c",
     "parameterVersion": "1.1.0",
     "dataLimits": [
@@ -839,7 +832,7 @@
       "2026-11-03",
       "2026-11-04"
     ],
-    "source": "Eastmoney index actual daily-bar dates (observed, no future schedule)",
+    "source": "Tencent index actual daily-bar dates (observed, no future schedule)",
     "verified": true,
     "coverageThrough": "2026-11-04",
     "futureDatesEstimated": false
@@ -872,12 +865,12 @@
       "trendSetupVerified": true,
       "referencePeak": 14.15,
       "firstObservedAt": "2026-11-03T16:29:24.411043+08:00",
-      "amount": 189269080.53,
+      "amount": 189270000.0,
       "stale": false,
       "price": 13.35,
       "high": 13.35,
       "low": 12.91,
-      "quoteTimestamp": "2026-11-04T15:34:42+08:00",
+      "quoteTimestamp": "2026-11-04T16:14:42+08:00",
       "limitDownPrice": 11.83,
       "eventDayIndex": 1,
       "expiresOn": null,
@@ -1019,7 +1012,6 @@
       },
       "hardVetoReasons": [],
       "reasonCodes": [
-        "CURRENT_DAILY_LIMITS_UNVERIFIED",
         "QUOTE_NOT_FRESH_FOR_ENTRY",
         "SECURITY_METADATA_UNVERIFIED",
         "ANNOUNCEMENTS_UNVERIFIED",
@@ -1055,12 +1047,12 @@
       "firstTouchTimeVerified": false,
       "limitEventVerified": true,
       "limitEventSource": "Tencent reported daily upper/lower limit fields 47/48",
-      "amount": 155632405.84,
+      "amount": 155630000.0,
       "stale": false,
       "price": 17.0,
       "high": 17.0,
       "low": 14.92,
-      "quoteTimestamp": "2026-11-04T15:34:30+08:00",
+      "quoteTimestamp": "2026-11-04T16:14:45+08:00",
       "limitDownPrice": 13.91,
       "eventDayIndex": 0,
       "expiresOn": null,
@@ -1207,7 +1199,6 @@
       ],
       "reasonCodes": [
         "VOLATILITY_TOO_HIGH",
-        "CURRENT_DAILY_LIMITS_UNVERIFIED",
         "QUOTE_NOT_FRESH_FOR_ENTRY",
         "SECURITY_METADATA_UNVERIFIED",
         "ANNOUNCEMENTS_UNVERIFIED",
@@ -1228,12 +1219,12 @@
   "stats": {
     "candidateCount": 2,
     "eventCount": 409,
-    "quoteCount": 5220,
+    "quoteCount": 5223,
     "watchCount": 1,
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 175,
+    "historyAnalyzedCount": 125,
     "historyEnrichmentCap": 120
   },
   "learning": {
