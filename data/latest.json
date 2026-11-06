@@ -2,9 +2,9 @@
   "meta": {
     "schemaVersion": 1,
     "strategyId": "LBR_MAIN_V1",
-    "generatedAt": "2026-11-06T21:08:56.413726+08:00",
-    "lastSuccessfulAt": "2026-11-06T21:08:56.413726+08:00",
-    "quoteTimestamp": "2026-11-06T16:15:00+08:00",
+    "generatedAt": "2026-11-06T21:14:58.334672+08:00",
+    "lastSuccessfulAt": "2026-11-06T21:14:58.334672+08:00",
+    "quoteTimestamp": "2026-11-06T16:12:00+08:00",
     "tradingDate": "2026-11-06",
     "stale": false,
     "mode": "public-delayed-manual-monitor",
@@ -15,19 +15,42 @@
         "note": "Actual historical daily bars; no intraday confirmation"
       },
       {
-        "name": "Tencent",
+        "name": "Eastmoney",
         "ok": true,
-        "note": "5223 requested symbols received with reported daily limits; security/account metadata unverified"
+        "note": "Public delayed quote endpoint responded; metadata remains unverified"
       },
       {
-        "name": "Sina-universe",
+        "name": "Eastmoney-universe",
         "ok": true,
-        "note": "Enumerated 5578 symbols; complete=True; explicit board exclusions complete=True"
+        "note": "99 symbols received; pagination can be partial and is reported separately"
       }
     ],
     "errors": [
       "Daily history 000001.SH: Remote end closed connection without response",
-      "Eastmoney universe SSE_MAIN page 1: Remote end closed connection without response"
+      "Eastmoney universe SSE_MAIN page 2: Remote end closed connection without response",
+      "Eastmoney universe SZSE_MAIN page 1: Remote end closed connection without response",
+      "Eastmoney universe CHINEXT page 1: Remote end closed connection without response",
+      "Eastmoney universe STAR page 1: Remote end closed connection without response",
+      "Daily limits 605388.SH: Remote end closed connection without response",
+      "Daily limits 605133.SH: Remote end closed connection without response",
+      "Daily limits 605189.SH: HTTP Error 502: Bad Gateway",
+      "Daily limits 605069.SH: HTTP Error 502: Bad Gateway",
+      "Daily limits 605598.SH: Remote end closed connection without response",
+      "Daily limits 605060.SH: Remote end closed connection without response",
+      "Daily limits 605196.SH: Remote end closed connection without response",
+      "Daily limits 605358.SH: Remote end closed connection without response",
+      "Daily limits 605111.SH: Remote end closed connection without response",
+      "Daily limits 605305.SH: Remote end closed connection without response",
+      "Daily limits 605090.SH: Remote end closed connection without response",
+      "Daily limits 605296.SH: Remote end closed connection without response",
+      "Daily limits 605488.SH: Remote end closed connection without response",
+      "Daily limits 605168.SH: Remote end closed connection without response",
+      "Daily limits 605287.SH: Remote end closed connection without response",
+      "Daily limits 605178.SH: Remote end closed connection without response",
+      "Daily limits 605599.SH: Remote end closed connection without response",
+      "Daily limits 605162.SH: Remote end closed connection without response",
+      "Daily limits 605319.SH: Remote end closed connection without response",
+      "Daily limits 605289.SH: Remote end closed connection without response"
     ],
     "automaticOrders": false,
     "calendarSource": "Tencent index actual daily-bar dates (observed, no future schedule)",
@@ -868,7 +891,7 @@
       "referencePeak": 14.15,
       "firstObservedAt": "2026-11-03T16:29:24.411043+08:00",
       "amount": 137380000.0,
-      "stale": false,
+      "stale": true,
       "price": 13.23,
       "high": 13.41,
       "low": 12.91,
@@ -1021,7 +1044,8 @@
         "STRUCTURE_UNVERIFIED",
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
+        "QUOTE_MISSING"
       ],
       "status": "WATCH",
       "action": "WATCH_NO_BROKER_ORDER",
@@ -1050,7 +1074,7 @@
       "limitEventVerified": true,
       "limitEventSource": "Tencent reported daily upper/lower limit fields 47/48",
       "amount": 140920000.0,
-      "stale": false,
+      "stale": true,
       "price": 16.11,
       "high": 16.54,
       "low": 16.03,
@@ -1123,7 +1147,8 @@
         "STRUCTURE_UNVERIFIED",
         "ACCOUNT_STATE_UNSYNCED",
         "INTRADAY_CONFIRMATION_UNAVAILABLE",
-        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT"
+        "PAYOFF_UNAVAILABLE_OR_INSUFFICIENT",
+        "QUOTE_MISSING"
       ],
       "status": "WATCH",
       "action": "WATCH_NO_BROKER_ORDER",
@@ -1136,13 +1161,13 @@
   ],
   "stats": {
     "candidateCount": 2,
-    "eventCount": 632,
-    "quoteCount": 5223,
+    "eventCount": 633,
+    "quoteCount": 99,
     "watchCount": 2,
     "readyCount": 0,
     "limitCandidateCount": 1,
     "trendCandidateCount": 1,
-    "historyAnalyzedCount": 148,
+    "historyAnalyzedCount": 140,
     "historyEnrichmentCap": 120
   },
   "learning": {
